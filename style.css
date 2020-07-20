@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
 
 html {
   box-sizing: border-box;
@@ -10,6 +10,7 @@ body {
   overflow-y: hidden;
   display: flex;
   align-items: center;
+  font-family: Comfortaa, sans-serif;
 
 }
 
@@ -85,6 +86,8 @@ input {
   border-radius: 20px;
   background: #fff;
   outline: none;
+  font-family: Comfortaa, sans-serif;
+
 
 }
 
@@ -102,6 +105,10 @@ button {
   outline: none;
 }
 
+button:hover {
+  filter: brightness(110%);
+}
+
 
 
 /* Countdown */
@@ -110,7 +117,7 @@ ul {
 }
 
 li {
-
+  display: inline-block;
   font-size: 30px;
   list-style-type: none;
   padding: 10px;
@@ -129,6 +136,30 @@ li span {
   top: 60px;
 }
 
+.complete-title {
+  animation: complete 4s infinite;
+}
+
+/* Creating the animation */
+@keyframes complete {
+  0% {
+    color: rgb(227, 15, 15);
+  }
+  25%{
+    color: rgb(209, 227, 15);
+  }
+  50%{
+    color: rgb(15, 227, 64);
+    transform: scale(1.5);
+  }
+  75% {
+    color: rgb(15, 75, 227)
+  }
+  100%{
+    color: rgb(227, 15, 202)
+  }
+
+}
 
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
@@ -145,7 +176,8 @@ li span {
   }
 
   .container {
-
+    min-width: unset;
+    width: 95vw;
     min-height: 245px;
     padding: 20px;
     margin: 10px;
